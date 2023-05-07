@@ -11,6 +11,7 @@ export default () => (
         src="logo.png"
         alt="Logo image"
         />
+        
         <div>
             <h5 className="font-weight-bold mb-0">Мэдээ, мэдээлэлийн нэгдсэн портал сайт</h5>
             <p className="welcome-text">Орчин үеийн технологийн талаар сонирхолтой мэдээ мэдээлэл 

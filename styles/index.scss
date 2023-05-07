@@ -5,7 +5,6 @@ body {
     font-size: normal;
     font-size: 14px;
     font-weight: 300;
-    background-color: #f4f7f9;
 }
 
 .clickable{
@@ -23,4 +22,37 @@ body {
 .page-wrapperc{
     padding-top: 20px;
 }
+
+.blog-image {
+    margin-bottom: 10px;
+    text-align: center;
+
+    &-left {
+        float: left;
+        margin-right: 30px;
+    }
+
+    &-right {
+        float: right;
+        margin-left: 30px;
+    }
+}
+
+.image-alt{
+    margin-top: 3px;
+}
+
+
+.defaul-button {
+    width: 150px !important;
+
+}
+
+.dark{
+    .post-item {
+        background-color: #232129;
+        transition: color 0s ease-out, background 0.2s ease-out 0s;
+    }
+}
+
 
