@@ -1,7 +1,6 @@
 import {Container, Row, Col,} from "react-bootstrap"
 import Header from "./my-navbar";
 import Footer from "./my-footer";
-import SideBar from "./side-bar";
 import {useTheme} from "hooks/use-theme"
 
 const Layout =({children}) => {
@@ -9,7 +8,7 @@ const Layout =({children}) => {
     return (
 
         <div className={theme.type}>
-            <Header />
+            <Header />z
             <Container className="mb-5">
                 <Row className="mb-5">
                     <Col md="12">

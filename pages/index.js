@@ -1,7 +1,4 @@
-import {Container, Row, Col, Button} from "react-bootstrap"
-import usePosts from "@/hooks/use-posts"
-
-import ListItem from "@/components/list-item"
+import {Row, Col, Button} from "react-bootstrap"
 import GridItem from "@/components/grid-item"
 import {getPaginatedPosts} from "lib/api"
 import Layout from "components/layout"

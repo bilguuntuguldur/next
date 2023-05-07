@@ -1,10 +1,9 @@
 import {Row, Col} from "react-bootstrap"
-import { getPostBySlug, getAllPosts, getPaginatedPosts } from "@/lib/api";
+import { getPostBySlug, getPaginatedPosts } from "@/lib/api";
 import BlockContent from '@sanity/block-content-to-react';
 import Layout from "components/layout"
 import moment from "moment";
 import {urlFor} from "lib/api"
-import SideBar from "@/components/side-bar";
 import {useRouter} from "next/router"
 
 export default ( {post} ) => {
@@ -21,8 +20,7 @@ export default ( {post} ) => {
         <div>
             <Layout>
                 <Row>
-                    <Col md="4">
-                        <SideBar />
+                    <Col md="2">
                     </Col>
                     <Col md="8">
                         {/* <pre>{JSON.stringify(post, null, 2)}</pre> */}
@@ -39,10 +37,10 @@ export default ( {post} ) => {
                                 Т.Билгүүнтөгөлдөр, {moment(post.date).subtract(10, 'days').calendar()}
                             </p>
                             <hr/>
-                            <h1 className="font-weight-bold blog-detail-header-title mb-2">
+                            <h2 className="font-weight-bold blog-detail-header-title mb-2">
                                 {post.title}
-                            </h1>
-                            <h2 className="blog-detail-header-subtitle mb-5">{post.subtitle}</h2>
+                            </h2>
+                            <h4 className="blog-detail-header-subtitle mb-5" style={{color: "#0d6efd"}}>{post.subtitle}</h4>
                             <img 
                                 className="img-fliud rounded"
                                 src={urlFor(post.image).height(600).url()}
@@ -57,6 +55,8 @@ export default ( {post} ) => {
                             serializers={serializers} 
                             imageOptions={{w: 720, h: 420, fit: 'max'}} 
                         />
+                    </Col>
+                    <Col md="2">
                     </Col>
                 </Row>
             </Layout>
